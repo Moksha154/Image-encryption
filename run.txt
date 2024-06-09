@@ -1,0 +1,60 @@
+Here's a step-by-step guide to running the imcrypt task:
+
+Step 1: Install the imcrypt package
+
+Open a terminal or command prompt and run the following command:
+
+
+Open In Editor
+Edit
+Copy code
+npm install -g imcrypt
+This will install the imcrypt package globally on your system.
+
+Step 2: Prepare an image file
+
+Choose an image file (e.g., myImage.png, myImage.jpg, or myImage.jpeg) that you want to encrypt. Make sure the file is in the same directory as your terminal or command prompt.
+
+Step 3: Encrypt the image file
+
+Run the following command to encrypt the image file:
+
+
+Open In Editor
+Edit
+Copy code
+imcrypt -e myImage.png -i encryptedImage.png -p key.txt
+Here:
+
+-e or --encrypt flag specifies that you want to encrypt the image.
+myImage.png is the input image file.
+-i or --outputImageFileName flag specifies the output encrypted image file name.
+encryptedImage.png is the output encrypted image file name.
+-p or --outputKeyFileName flag specifies the output key file name.
+key.txt is the output key file name.
+Step 4: Verify the encryption
+
+After running the command, you should see a success message indicating that the image has been encrypted successfully. You should also see two new files in your directory: encryptedImage.png (the encrypted image file) and key.txt (the encryption key file).
+
+Step 5: Decrypt the image file (optional)
+
+If you want to decrypt the image file, run the following command:
+
+
+Open In Editor
+Edit
+Copy code
+imcrypt -d encryptedImage.png -k key.txt -i decryptedImage.png
+Here:
+
+-d or --decrypt flag specifies that you want to decrypt the image.
+encryptedImage.png is the input encrypted image file.
+-k or --key flag specifies the input key file.
+key.txt is the input key file.
+-i or --outputImageFileName flag specifies the output decrypted image file name.
+decryptedImage.png is the output decrypted image file name.
+Step 6: Verify the decryption
+
+After running the command, you should see a success message indicating that the image has been decrypted successfully. You should also see a new file in your directory: decryptedImage.png (the decrypted image file).
+
+That's it! You've successfully encrypted and decrypted an image file using the imcrypt CLI tool.
